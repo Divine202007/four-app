@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Profil from './Profile/Components/Profil';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import myImage from './photo.jpg'
+
+const user = {
+  img: myImage,
+  fullName: "Kouassi Kouame Jean",
+  bio: "Travailleur",
+  profession: "Frontend developer"
+};
+
+const handleName = (fullName) => alert(`Le nom de l'utilisateur est: ${fullName}`)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Profil user={user} handleName={handleName} />
     </div>
   );
 }
