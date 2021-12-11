@@ -4,8 +4,8 @@ const Profil = (props) => {
 
 
   return(
- 
-    <div className="card mb-3" style={{maxWidth:"540px"}}>
+    
+    <div className="card mb-3" style={{maxWidth:"540px"}} onClick= { () => props.handleName(props.user.fullName)}>
       <div className="row g-0">
         <div className="col-md-4">
           <img src={props.user.img} class="img-fluid rounded-start" alt="..."/>
